@@ -1,53 +1,156 @@
-/* Fundo e corpo */
+:root {
+--branco: white;
+--cor-de-fundo: #923f3f;
+--fundo-senha: #810606;
+--fundo-texto: #400400;
+--borda: #ff0000;
+--roboto: 'Roboto', sans-serif;
+--roboto-mono: 'Roboto Mono', monospace;
+}
+
+* {
+font-weight: 400;
+}
+
 body {
-  background-color: #FFFAF0; /* tom suave de creme quente */
-  font-family: 'Arial', sans-serif;
-  color: #333; /* cor de texto neutra para contraste */
-  margin: 0;
-  padding: 20px;
+color: var(--branco);
+background-color: var(--cor-de-fundo);
+font-family: var(--roboto);
 }
 
-/* Cabeçalho */
-h1, h2, h3 {
-  color: #E94E1B; /* laranja queimado */
+.titulo-principal {
+font-family: var(--roboto-mono);
+font-size: 32px;
 }
 
-/* Links */
-a {
-  color: #D35400; /* laranja escuro */
-  text-decoration: none;
+.titulo-secundario {
+font-size: 24px;
 }
 
-a:hover {
-  color: #C0392B; /* vermelho queimado ao passar o mouse */
+.conteudo-titulo {
+text-align: center;
+margin-top: 80px;
 }
 
-/* Botões */
-button {
-  background-color: #E67E22; /* laranja vibrante */
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+.conteudo-senha {
+margin-top: 80px;
+background: var(--fundo-senha);
+padding: 24px;
+border-bottom: 6px solid var(--borda);
 }
 
-button:hover {
-  background-color: #D35400; /* laranja escuro ao passar o mouse */
+#campo-senha {
+background-color: var(--fundo-senha);
+border: none;
+color: var(--branco);
+font-family: var(--roboto-mono);
+font-size: 40px;
+width: 70%;
 }
 
-/* Seções ou elementos específicos */
-.section {
-  background-color: #F5B041; /* amarelo queimado claro */
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+#campo-senha:focus {
+outline: none;
 }
 
-/* Rodapé */
-footer {
-  background-color: #C0392B; /* vermelho escuro */
-  color: #fff;
-  padding: 10px;
-  text-align: center;
+.conteudo {
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.parametro {
+background-color: var(--fundo-texto);
+border: 2px solid var(--borda);
+margin-top: 32px;
+padding: 24px;
+}
+
+.parametro-titulo {
+font-family: var(--roboto-mono);
+font-size: 28px;
+}
+
+.parametro-senha__titulo {
+font-size: 24px;
+}
+
+.parametro-coluna__senha {
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.parametro-senha {
+width: 50%;
+margin: 0 auto;
+}
+
+.parametro-senha-botoes {
+display: flex;
+justify-content: center;
+}
+
+.parametro-senha__botao {
+background-color: var(--fundo-texto);
+color: var(--branco);
+border: 2px solid var(--borda);
+padding: 24px;
+font-size: 24px;
+cursor: pointer;
+}
+
+.parametro-senha__texto {
+padding: 24px;
+border-top: 2px solid var(--borda);
+border-bottom: 2px solid var(--borda);
+margin: 0;
+font-size: 24px;
+}
+
+label {
+font-size: 20px;
+}
+
+.checkbox {
+width: 20px;
+height: 20px;
+cursor: pointer;
+}
+
+.barra {
+background-color: var(--fundo-senha);
+height: 30px;
+width: 100%;
+}
+
+.forca {
+height: 30px;
+position: relative;
+bottom: 30px;
+}
+
+.fraca {
+width: 25%;
+background-color: #E71B32;
+}
+
+.media {
+background-color: #FAF408;
+width: 50%;
+}
+
+.forte {
+background-color: #00FF85;
+width: 100%;
+}
+
+.parametro-senha-textos {
+display: flex;
+justify-content: space-between;
+}
+
+
+@media screen and (min-width: 768px) {
+.parametro-coluna__senha {
+flex-direction: row;
+}
 }
