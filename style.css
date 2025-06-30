@@ -153,4 +153,36 @@ justify-content: space-between;
 .parametro-coluna__senha {
 flex-direction: row;
 }
+/* Estilos básicos para visualização */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.parametro-senha {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.parametro-senha__titulo {
+  margin-bottom: 10px;
+}
+
+.entropia {
+  margin-top: 15px;
+  font-weight: bold;
+}
+.forte {
+  color: green;
+}
+.media {
+  color: orange;
+}
+.fraca {
+  color: red;
+}
 }
